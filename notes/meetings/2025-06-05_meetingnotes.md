@@ -1,7 +1,7 @@
 2025-06-05 project hackastroll
 ====
 # introduction
-meeting notes of the brighton creatives project
+meeting notes of the brighton creatives project kickoff meeting
 
 ## in attendance
 - oskar holm
@@ -42,7 +42,7 @@ meeting notes of the brighton creatives project
         + ai-agent/llms/notebook lm + list of references --> link to original
 - hard data from arts council map: 
     + https://www.artscouncil.org.uk/your-area/culture-and-place-data-explorer
-    + https://www.artscouncil.org.uk/sites/default/files/2024-09/Culture%20and%20Place%20Data%20Explorer%20-%20Quick%20Start%20Guide%20%20ACE%20%281%29.pdf
+    + https://www.artscouncil.org.uk/sites/default/files/2024-09/Culture%20and%20Place%20Data%20Explorer%20-%20Quick%20Start%20Guide%20%20ACE%20%281%29.pdf, https://www.artscouncil.org.uk/our-organisation/expenditure-data, https://www.artscouncil.org.uk/research-and-data/our-data, https://culture.localinsight.org/#/map
     + fiona shared a report from the oxford consultancy group and art council england.
     + fiona shared a powerbi dashboard
 
@@ -56,4 +56,5 @@ need to focus the search for information. look for one of these:
 2. where is this money going to? what else can we know about the areas where the grants are going? median income, demographics, etc.
 3. we have found over 400 empty spaces in brighton. how many of these are artistic places
 
-# need to 
+# need to do: 
+- 
