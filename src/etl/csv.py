@@ -15,13 +15,20 @@ def load_from_template(
     template_filepath: str = None,
 ):
     """
-    Loads CSV data from the source filepath according to a template that includes:
-    * data subdirectory (defaults to .)
-    * destination duckdb (defaults to creatives.duckdb)
-    * destination table (mandatory)
-    * number of header lines
-    * source to target column mappings (e.g. WD25CD:ward_code)
-      * if no mappings are present then the source columns headers are used
+    Loads CSV data from the source filepath
+    This includes an optional template where things like
+    - the target table name,
+    - alternative column names,
+    - non-VARCHAR columns,
+    - the header row index, and
+    - the number of columns to skip can be specified.
+    There is an example template in tests/fixtures/sample-ward-to-lad-template.json
+    If no template is supplied then defaults are used, i.e.
+    - the source column names
+    - an assumption that the first row of the CSV is the header
+    - no skipped rows
+    - all str (VARCHAR) columns
+    - a generated table name using an underscore-separated two word coolname
     """
     logger.debug(
         f"Loading {source_filepath} to {db_connection.description} using template {template_filepath}"
