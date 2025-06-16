@@ -4,3 +4,7 @@
 data/csv/osopenuprn_202505.csv
 *.wal
 venv/
+src/brighton_creatives.egg-info/
+.idea
+*.iml
+__pycache__

@@ -1,0 +1,16 @@
+{
+  "name": "ons-ward-to-la",
+  "target_table": "ward_to_lad",
+  "column_mappings": {
+    "WD25CD": "ward_code",
+    "WD25NM": "ward_name",
+    "WD25NMW": "welsh_ward_name",
+    "LAD25CD": "local_authority_code",
+    "LAD25NM": "local_authority_name",
+    "LAD25NMW": "welsh_local_authority_name",
+    "ObjectId": "ons_internal_id"
+  },
+  "column_type_overrides": {
+    "ons_internal_id": "TINYINT"
+  }
+}
