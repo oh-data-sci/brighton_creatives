@@ -108,3 +108,71 @@ Prompted by this article from the Brighton Chamber
 - [CITIB International Strategy (2022-2025)](https://www.thecreativeindustries.co.uk/download-hub/citib-international-strategy-2022-2025) 
 
 - [Culture and Place Data Explorer](https://www.artscouncil.org.uk/your-area/culture-and-place-data-explorer) - a brilliant interactive map for exploring multiple factors related to culture and creativity
+
+# Python ETL
+
+## Overview
+This is a mini-EL (no transformations at the moment) pipeline that loads data from a basic CSV file into a DuckDB table 
+based on a JSON template. A "basic" CSV file is one that has a header row
+
+## Installation
+
+* Requires Python 3.12 (if this is problematic shout and we can downgrade) and pip
+* Dependencies and other stuff are defined in the `pyproject.toml`
+* From the `brighton_creatives` directory:
+  * `python -m venv venv`
+  * `source venv/bin/activate` (`.\venv\Scripts\activate.bat` from Windows cmd)
+  * `pip install -e .[dev]
+    * Drop the `[dev]` if you don't need or want the dev dependencies from the `pyproject.toml` 
+` 
+## Quick Tour
+* Code is in the `src` folder and within the `etl` package
+* Tests are in `tests\etl` and use [Pytest](https://docs.pytest.org/en/stable/)
+* The `csv.py` file contains a generic `load_from_template` that:
+
+### The Extract and Load method
+* Delivered for [Issue 5](https://github.com/oh-data-sci/brighton_creatives/issues/5)
+* See `src/etl/csv.py#load_from_template`
+  * Takes a `source_filepath` and optional JSON template
+  * Loads or defaults the template from the file
+* loads the data into a Pandas `DataFrame` based on the instructions in the template
+* Stores the data in a DuckDB table as per the template
+  * or it gives it an arbitrary name using [coolname](https://pypi.org/project/coolname/)
+
+### More about the EL Template
+* This is an example template used in the `tests` and can be found at `tests\fixtures\test-ward-to-lad-template.json`
+```json
+{
+  "name": "ons-ward-to-la",
+  "target_table": "ward_to_lad",
+  "column_mappings": {
+    "WD25CD": "ward_code",
+    "WD25NM": "ward_name",
+    "WD25NMW": "welsh_ward_name",
+    "LAD25CD": "local_authority_code",
+    "LAD25NM": "local_authority_name",
+    "LAD25NMW": "welsh_local_authority_name",
+    "ObjectId": "ons_internal_id"
+  },
+  "column_type_overrides": {
+    "ons_internal_id": "TINYINT"
+  }
+} 
+```
+* The target table is the name of the resulting DuckDB table
+* The column mappings optionally rename the CSV columns to other names
+  * Use `column_mappings: {}` or just omit the key to keep the source names
+  * Leave a column out if it's not needed in the target
+* The column type overrides allow change of type from `VARCHAR` which is the default
+
+### Running tests
+* `pytest` is used for unit testing
+* To make the unit testing as deep as possible an in-memory DuckDB is used
+  * see its setup in `tests/conftest.py`
+  * a test db connection is passed to each test that needs it
+* After the installation steps above you can run the tests via `pytest` from the root dir (i.e. `brighton_creatives`)
+  * Make sure you have installed into your `venv` with the `[dev]` option
+  * This is because `pytest` and other dev dependencies are in the `dev` section in the `TOML`
+* There's plenty (probably too much 😂) of logger debug statements that show what's going on under the hood
+* To alter the log output level change it in `tests/conftest.py`, e.g. logging.basicConfig(level=logging.DEBUG)
+* Then do `pytest -s` to output logs
