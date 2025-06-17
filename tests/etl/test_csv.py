@@ -91,4 +91,4 @@ def test_load_from_template_valid_template(testdb_connection):
     assert ward_data[4] == "Hartlepool"
     assert ward_data[5] is None
     assert ward_data[6] == 1
-    assert type(ward_data[6]) == int
+    assert isinstance(ward_data[6], int)
