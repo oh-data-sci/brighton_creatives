@@ -43,6 +43,9 @@ def load_from_template(
     skip_rows = template.get("skip_rows", 0)
     logger.debug(f"Will skip {skip_rows} lines")
 
+    unique_key = template.get("unique_key", None)
+    logger.debug(f"{unique_key} is the unique key")
+
     encoding = template.get("encoding", "utf-8")
     logger.debug(f"File encoding is {encoding}")
 
@@ -63,7 +66,7 @@ def load_from_template(
     )
 
     _load_df_to_duck(
-        db_connection, df, target_table, column_mappings, column_type_overrides
+        db_connection, df, target_table, unique_key, column_mappings, column_type_overrides
     )
 
     return target_table
@@ -97,7 +100,7 @@ def _load_template(json_path: str) -> dict:
     return template
 
 
-def _load_df_to_duck(conn, df, target_table, column_mappings, column_type_overrides):
+def _load_df_to_duck(conn, df, target_table, unique_key, column_mappings, column_type_overrides):
     default_type = "VARCHAR"
     logger.debug(f"df columns {df.columns}")
     source_col_names = (
@@ -116,17 +119,31 @@ def _load_df_to_duck(conn, df, target_table, column_mappings, column_type_overri
     ]
     logger.debug(f"Column defs are: {col_defs}")
 
+    unique_constraint = f"CONSTRAINT uk_{target_table} UNIQUE ({unique_key})"
+
     # create target table in duck
-    create_table_sql = f"""
-    CREATE TABLE IF NOT EXISTS {target_table} (
-        {", ".join(col_defs)}
-    )
-    """
+    if not unique_key:
+        create_table_sql = f"""
+        CREATE TABLE IF NOT EXISTS {target_table} (
+            {", ".join(col_defs)}
+        )
+        """
+    else:
+        create_table_sql = f"""
+        CREATE TABLE IF NOT EXISTS {target_table} (
+            {", ".join(col_defs)},
+            {unique_constraint}
+        )
+        """
+    logger.debug(f"Create statement is {create_table_sql}")
     conn.execute(create_table_sql)
 
     # register temp table with the cleaned df
     conn.register("temp_table", df_clean)
     # insert from temp table into target table
-    conn.execute(f"INSERT INTO {target_table} SELECT * FROM temp_table")
+    if not unique_key:
+        conn.execute(f"INSERT INTO {target_table} SELECT * FROM temp_table")
+    else:
+        conn.execute(f"INSERT INTO {target_table} SELECT * FROM temp_table ON CONFLICT DO NOTHING")
     # clean up
     conn.unregister("temp_table")

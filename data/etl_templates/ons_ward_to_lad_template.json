@@ -8,10 +8,6 @@
     "WD25NMW": "welsh_ward_name",
     "LAD25CD": "local_authority_code",
     "LAD25NM": "local_authority_name",
-    "LAD25NMW": "welsh_local_authority_name",
-    "ObjectId": "ons_internal_id"
-  },
-  "column_type_overrides": {
-    "ons_internal_id": "TINYINT"
+    "LAD25NMW": "welsh_local_authority_name"
   }
 }
