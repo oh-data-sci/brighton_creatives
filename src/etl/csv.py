@@ -66,7 +66,12 @@ def load_from_template(
     )
 
     _load_df_to_duck(
-        db_connection, df, target_table, unique_key, column_mappings, column_type_overrides
+        db_connection,
+        df,
+        target_table,
+        unique_key,
+        column_mappings,
+        column_type_overrides,
     )
 
     return target_table
@@ -100,7 +105,9 @@ def _load_template(json_path: str) -> dict:
     return template
 
 
-def _load_df_to_duck(conn, df, target_table, unique_key, column_mappings, column_type_overrides):
+def _load_df_to_duck(
+    conn, df, target_table, unique_key, column_mappings, column_type_overrides
+):
     default_type = "VARCHAR"
     logger.debug(f"df columns {df.columns}")
     source_col_names = (
@@ -144,6 +151,8 @@ def _load_df_to_duck(conn, df, target_table, unique_key, column_mappings, column
     if not unique_key:
         conn.execute(f"INSERT INTO {target_table} SELECT * FROM temp_table")
     else:
-        conn.execute(f"INSERT INTO {target_table} SELECT * FROM temp_table ON CONFLICT DO NOTHING")
+        conn.execute(
+            f"INSERT INTO {target_table} SELECT * FROM temp_table ON CONFLICT DO NOTHING"
+        )
     # clean up
     conn.unregister("temp_table")
