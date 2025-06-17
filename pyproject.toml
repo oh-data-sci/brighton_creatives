@@ -1,6 +1,6 @@
 [project]
 name = "brighton-creatives"
-version = "0.2.0"
+version = "0.3.0"
 description = "etl pipelines and tools for Brighton Creatives project"
 authors = [{ name = "sih", email = "sid@datasoc.ltd" }]
 readme = "readme.md"

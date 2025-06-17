@@ -145,6 +145,7 @@ based on a JSON template. A "basic" CSV file is one that has a header row
 {
   "name": "ons-ward-to-la",
   "target_table": "ward_to_lad",
+  "unique_key": "ward_code",
   "column_mappings": {
     "WD25CD": "ward_code",
     "WD25NM": "ward_name",

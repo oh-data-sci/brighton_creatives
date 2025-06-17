@@ -5,7 +5,7 @@ import pytest
 
 def pytest_configure():
     # change me to alter the logging level across tests
-    logging.basicConfig(level=logging.INFO)
+    logging.basicConfig(level=logging.DEBUG)
 
 
 class TestDBConnection:
