@@ -29,11 +29,8 @@ here we are focusing on the impact on the creative industries in brighton. our p
 Prompted by this article from the Brighton Chamber 
 - [discussion at brighton chamber](https://www.brightonchamber.co.uk/blog/the-big-debate-is-brightons-creative-sector-an-undervalued-powerhouse)
 
-- [Economic Factors related to the arts](https://github.com/oh-data-sci/brighton_creatives/blob/main/notes/economic-factors.md)
-- [Non-Economic Factors related to the arts]
-
 - **Q1: What are the greatest barriers for creative people working in Brighton?**
-    - Affordable spaces to make/do (e.g., the closure of New England House).
+    - Affordable spaces to make/do (e.g., the closure of New England House)
     - Spaces to show/sell
     - Supportive infrastructure (e.g., arts organisations, local funding)
     - Routes to audiences (e.g., tourism board, what's on guides, social media, ticketing sites)
@@ -42,7 +39,7 @@ Prompted by this article from the Brighton Chamber
         - e.g., has AI impacted photographers and visual designers? 
 
 - **Q2: What are the greatest barriers for creative people living in Brighton?**
-    - Cost of living versus average income.
+    - Cost of living versus average income
         - Related to this, I am interested in finding out if there is a general trend of people leaving Brighton, beyond the usual changes to the student population.
     - Relative costs of rents in Brighton as compared to income
     - Issues with housing stock in more affordable areas. Related to this - just some ideas...
@@ -51,10 +48,12 @@ Prompted by this article from the Brighton Chamber
         - Quality of doctors surgeries
         - Access to an NHS dentist
 
+- [Economic Factors related to the arts](https://github.com/oh-data-sci/brighton_creatives/blob/main/notes/economic-factors.md)
+- [Non-Economic Factors related to the arts](https://github.com/oh-data-sci/brighton_creatives/blob/main/notes/Non-economic-factors.md)
+
 
 # sources
 
-- [discussion at brighton chamber](https://www.brightonchamber.co.uk/blog/the-big-debate-is-brightons-creative-sector-an-undervalued-powerhouse)
 - [ons: methodology](https://oflog.data.gov.uk/methodology?area=BN1+1ND)
 - [ons: advice](https://blog.ons.gov.uk/2024/03/26/local-data-at-your-fingertips/)
 - [arts](https://lginform.local.gov.uk/dataAndReports/search/3676?text=arts)
