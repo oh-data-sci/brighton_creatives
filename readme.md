@@ -29,7 +29,14 @@ here we are focusing on the impact on the creative industries in brighton. our p
 Prompted by this article from the Brighton Chamber 
 - [discussion at brighton chamber](https://www.brightonchamber.co.uk/blog/the-big-debate-is-brightons-creative-sector-an-undervalued-powerhouse)
 
-- **Q1: What are the greatest barriers for creative people working in Brighton?**
+- **Q1: Who are the creative people?**
+    - Do we know how many creative workers there are in Brighton?
+    - Have the numbers of creative workers changed over time?
+  
+![image](https://github.com/user-attachments/assets/d75c82b9-ba8c-4e7b-8b59-25a6b1b9b04e)
+*Creative worker roles list from Caldow, Lee, Nelson, O'Riordan, & Pym (2024).*
+
+- **Q2: What are the greatest barriers for creative people working in Brighton?**
     - Affordable spaces to make/do (e.g., the closure of New England House)
     - Spaces to show/sell
     - Supportive infrastructure (e.g., arts organisations, local funding)
@@ -38,7 +45,7 @@ Prompted by this article from the Brighton Chamber
     - Are there any factors which may have impacted creative incomes in Brighton?
         - e.g., has AI impacted photographers and visual designers? 
 
-- **Q2: What are the greatest barriers for creative people living in Brighton?**
+- **Q3: What are the greatest barriers for creative people living in Brighton?**
     - Cost of living versus average income
         - Related to this, I am interested in finding out if there is a general trend of people leaving Brighton, beyond the usual changes to the student population.
     - Relative costs of rents in Brighton as compared to income
@@ -50,6 +57,23 @@ Prompted by this article from the Brighton Chamber
 
 - [Economic Factors related to the arts](https://github.com/oh-data-sci/brighton_creatives/blob/main/notes/economic-factors.md)
 - [Non-Economic Factors related to the arts](https://github.com/oh-data-sci/brighton_creatives/blob/main/notes/Non-economic-factors.md)
+
+# What does good data look like? 
+
+1. Good data has enough detail - we are looking for constituency and ward level. 
+2. Good data looks at Sussex not only Brighton & Hove (where possible).
+3. Good data lets us look at trends over the past 5 years.
+4. Good data addresses the three questions linked above. 
+
+The high level question we need to answer is:
+- Are creative people leaving Brighton?
+- What are the factors that might contribute to them leaving?
+
+# References 
+
+Laura Caldow, Callum Lee, S. L. Nelson, Kate O’Riordan & Martha Pym
+(09 Jan 2024): Cultural, creative and collective recovery: exploring a creative Worker income
+Guarantee (CWIG), Creative Industries Journal, DOI: 10.1080/17510694.2023.2301120
 
 
 # sources
