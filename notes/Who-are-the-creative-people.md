@@ -35,4 +35,8 @@
 
 ## References 
 
+Laura Caldow, Callum Lee, S. L. Nelson, Kate O’Riordan & Martha Pym
+(09 Jan 2024): Cultural, creative and collective recovery: exploring a creative Worker income
+Guarantee (CWIG), Creative Industries Journal, DOI: [10.1080/17510694.2023.2301120](https://www.tandfonline.com/doi/full/10.1080/17510694.2023.2301120)
+
 
