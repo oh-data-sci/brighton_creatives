@@ -62,7 +62,7 @@ Prompted by this article from the Brighton Chamber
 3. Good data lets us look at trends over the past 5 years.
 4. Good data addresses the three questions linked above. 
 
-The high level question we need to answer is:
+The high level questions we need to answer is:
 - Are creative people leaving Brighton?
 - What are the factors that might contribute to them leaving?
 
