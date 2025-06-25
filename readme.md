@@ -29,7 +29,7 @@ here we are focusing on the impact on the creative industries in brighton. our p
 Prompted by this article from the Brighton Chamber 
 - [discussion at brighton chamber](https://www.brightonchamber.co.uk/blog/the-big-debate-is-brightons-creative-sector-an-undervalued-powerhouse)
 
-- **Q1: Who are the creative people?**
+- **[Q1: Who are the creative people?](https://github.com/oh-data-sci/brighton_creatives/blob/main/notes/Who-are-the-creative-people.md)**
     - Do we know how many creative workers there are in Brighton?
     - Have the numbers of creative workers changed over time?
   
