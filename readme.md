@@ -33,7 +33,7 @@ Prompted by this article from the Brighton Chamber
 - Do we know how many creative workers there are in Brighton?
 - Have the numbers of creative workers changed over time?
 
-**Q2: What are the greatest barriers for creative people working in Brighton?**
+**[Q2: What are the greatest barriers for creative people working in Brighton?](https://github.com/oh-data-sci/brighton_creatives/blob/main/notes/What-are-the-barriers.md)**
 - Affordable spaces to make/do (e.g., the closure of New England House)
 - Spaces to show/sell
 - Supportive infrastructure (e.g., arts organisations, local funding)
