@@ -66,12 +66,6 @@ The high level question we need to answer is:
 - Are creative people leaving Brighton?
 - What are the factors that might contribute to them leaving?
 
-# References 
-
-Laura Caldow, Callum Lee, S. L. Nelson, Kate O’Riordan & Martha Pym
-(09 Jan 2024): Cultural, creative and collective recovery: exploring a creative Worker income
-Guarantee (CWIG), Creative Industries Journal, DOI: 10.1080/17510694.2023.2301120
-
 
 # sources
 
