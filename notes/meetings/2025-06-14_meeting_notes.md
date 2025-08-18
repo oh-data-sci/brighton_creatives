@@ -25,4 +25,5 @@ in attendance:
     + parse excel documents into tables
     + load table data into database
     + build an analytical query: 
-    + 
+
+problems with stakeholder alignment, cold start problems, when to use advanced analytics and when to apply data science and machine learning algorithms, text and natural language processing
